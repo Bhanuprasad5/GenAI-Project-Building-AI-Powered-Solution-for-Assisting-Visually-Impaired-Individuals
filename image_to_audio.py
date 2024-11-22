@@ -8,8 +8,15 @@ import streamlit as st
 from gtts import gTTS
 from PIL import Image
 
-# Configure Tesseract path
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+import pytesseract
+import os
+
+# Access the environment variable with os.getenv
+tesseract_cmd = os.getenv('TESSERACT_CMD')
+
+# Set the tesseract path using the environment variable
+pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+
 
 # Define functions
 def extract_text_from_image(image):
