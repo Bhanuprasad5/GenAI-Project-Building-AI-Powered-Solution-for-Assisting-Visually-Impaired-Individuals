@@ -1,19 +1,13 @@
 # Import necessary modules
+import streamlit as st
+import cv2
+from PIL import Image
+import pytesseract
+from gtts import gTTS
 from io import BytesIO
 
-import cv2
-import numpy as np
-import pytesseract
-import streamlit as st
-from gtts import gTTS
-from PIL import Image
-
-import pytesseract
-import os
-
-import pytesseract
-pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'  # Replace with the correct path
-
+# Configure Tesseract path
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 # Define functions
 def extract_text_from_image(image):
