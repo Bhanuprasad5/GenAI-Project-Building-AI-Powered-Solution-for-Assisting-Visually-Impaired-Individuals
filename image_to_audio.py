@@ -5,6 +5,7 @@ from PIL import Image
 import pytesseract
 from gtts import gTTS
 from io import BytesIO
+import numpy as np
 
 # Configure Tesseract path
 pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
