@@ -11,11 +11,8 @@ from PIL import Image
 import pytesseract
 import os
 
-# Access the environment variable with os.getenv
-tesseract_cmd = os.getenv('TESSERACT_CMD')
-
-# Set the tesseract path using the environment variable
-pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'  # Replace with the correct path
 
 
 # Define functions
